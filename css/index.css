@@ -47,15 +47,17 @@ body{
 }
 
 #history {
-  border: 1px solid #000;
-  margin: 0 0 10px 0;
+  border: 0 solid #000;
+  margin: 0 0 0 0;
   width: 300px;
-  background: white;
+  background: #F7F7E7;
 }
 #history-title {
   -moz-animation: blink 0.7s steps(5, start) infinite;
   -webkit-animation: blink 0.7s steps(5, start) infinite;
   -ms-animation: blink 0.7s steps(5, start) infinite;
+  margin: 0 0 0 0;
+  border: 0;
 }
 @-moz-keyframes blink {
   to {
