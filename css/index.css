@@ -1,6 +1,23 @@
 body{
-  background-color: skyblue;
+  background-color: rgb(135, 206, 235);
+  -moz-animation: background-animation 3s ease 0s infinite alternate;
+  -webkit-animation: background-animation 3s ease 0s infinite alternate;
+  -ms-animation: background-animation 3s ease 0s infinite alternate;
 }
+
+@-moz-keyframes background-animation {
+  0% { background-color: rgb(135, 206, 235); }
+  100% { background-color: rgb(135, 6, 235); }
+}
+@-webkit-keyframes background-animation {
+  0% { background-color: rgb(135, 206, 235); }
+  100% { background-color: rgb(135, 6, 235); }
+}
+@-ms-keyframes background-animation {
+  0% { background-color: rgb(135, 206, 235); }
+  100% { background-color: rgb(135, 6, 235); }
+}
+
 #kmc_mouse {
   position: absolute;
   user-select: none
