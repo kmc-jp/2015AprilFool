@@ -5,7 +5,7 @@ var WindowClose = React.createClass({
   render: function() {
     return (
       <button className="window-close" onClick={this.handleClick}>
-        é–‰ã˜ã‚‹
+        •Â‚¶‚é
       </button>
     );
   }
