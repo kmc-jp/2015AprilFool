@@ -1,4 +1,6 @@
 body{
+  background-image: url(img/KMClogo_mini.png);
+  background-size: 160px;
   background-color: rgb(135, 206, 235);
   -moz-animation: background-animation 3s ease 0s infinite alternate;
   -webkit-animation: background-animation 3s ease 0s infinite alternate;
