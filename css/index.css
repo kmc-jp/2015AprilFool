@@ -64,3 +64,21 @@ body{
   -webkit-animation: blink 0.7s steps(5, start) infinite;
   -ms-animation: blink 0.7s steps(5, start) infinite;
 }
+
+#welcome-kmc {
+  -moz-animation: logo-animation 1s ease 0s infinite alternate;
+  -webkit-animation: logo-animation 1s ease 0s infinite alternate;
+  -ms-animation: logo-animation 1s ease 0s infinite alternate;
+}
+@-moz-keyframes logo-animation {
+  0% { width: 756px; height: 189px; }
+  100% { width: 1056px; height: 309px; }
+}
+@-webkit-keyframes logo-animation {
+  0% { width: 756px; height: 189px; }
+  100% { width: 1056px; height: 309px; }
+}
+@-ms-keyframes logo-animation {
+  0% { width: 756px; height: 189px; }
+  100% { width: 1056px; height: 309px; }
+}
