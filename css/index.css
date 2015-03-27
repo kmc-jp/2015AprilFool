@@ -1,4 +1,6 @@
 body{
+  background-image: url(../img/KMClogo_mini.png);
+  background-size: 160px;
   background-color: rgb(135, 206, 235);
   -moz-animation: background-animation 3s ease 0s infinite alternate;
   -webkit-animation: background-animation 3s ease 0s infinite alternate;
@@ -6,19 +8,37 @@ body{
 }
 
 @-moz-keyframes background-animation {
-  0% { background-color: rgb(135, 206, 235); }
+  0% {
+    background-color: rgb(135, 206, 235);
+    background-position: 0 0;
+  }
   50% { background-color: rgb(149, 235, 135); }
-  100% { background-color: rgb(175, 96, 135); }
+  100% {
+    background-color: rgb(175, 96, 135);
+    background-position: 160px 102px;
+  }
 }
 @-webkit-keyframes background-animation {
-  0% { background-color: rgb(135, 206, 235); }
+  0% {
+    background-color: rgb(135, 206, 235);
+    background-position: 0 0;
+  }
   50% { background-color: rgb(149, 235, 135); }
-  100% { background-color: rgb(175, 96, 135); }
+  100% {
+    background-color: rgb(175, 96, 135);
+    background-position: 160px 102px;
+  }
 }
 @-ms-keyframes background-animation {
-  0% { background-color: rgb(135, 206, 235); }
+  0% {
+    background-color: rgb(135, 206, 235);
+    background-position: 0 0;
+  }
   50% { background-color: rgb(149, 235, 135); }
-  100% { background-color: rgb(175, 96, 135); }
+  100% {
+    background-color: rgb(175, 96, 135);
+    background-position: 160px 102px;
+  }
 }
 
 #kmc_mouse {
