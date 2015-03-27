@@ -25,3 +25,10 @@ body{
   position: absolute;
   user-select: none
 }
+
+#history {
+  border: 1px solid #000;
+  margin: 0 0 10px 0;
+  width: 300px;
+  background: white;
+}
