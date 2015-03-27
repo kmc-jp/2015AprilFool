@@ -7,15 +7,18 @@ body{
 
 @-moz-keyframes background-animation {
   0% { background-color: rgb(135, 206, 235); }
-  100% { background-color: rgb(135, 6, 235); }
+  50% { background-color: rgb(149, 235, 135); }
+  100% { background-color: rgb(175, 96, 135); }
 }
 @-webkit-keyframes background-animation {
   0% { background-color: rgb(135, 206, 235); }
-  100% { background-color: rgb(135, 6, 235); }
+  50% { background-color: rgb(149, 235, 135); }
+  100% { background-color: rgb(175, 96, 135); }
 }
 @-ms-keyframes background-animation {
   0% { background-color: rgb(135, 206, 235); }
-  100% { background-color: rgb(135, 6, 235); }
+  50% { background-color: rgb(149, 235, 135); }
+  100% { background-color: rgb(175, 96, 135); }
 }
 
 #kmc_mouse {
