@@ -66,6 +66,10 @@ body{
 }
 
 #welcome-kmc {
+  height: 309px;
+  margin: 0 0 10px 0;
+}
+#welcome-kmc img {
   -moz-animation: logo-animation 1s ease 0s infinite alternate;
   -webkit-animation: logo-animation 1s ease 0s infinite alternate;
   -ms-animation: logo-animation 1s ease 0s infinite alternate;
