@@ -1,3 +1,6 @@
+body{
+  background-color: skyblue;
+}
 #kmc_mouse {
   position: absolute;
   user-select: none
