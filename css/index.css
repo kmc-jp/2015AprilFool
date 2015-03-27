@@ -32,3 +32,23 @@ body{
   width: 300px;
   background: white;
 }
+#history-title {
+  -moz-animation: blink 0.7s steps(5, start) infinite;
+  -webkit-animation: blink 0.7s steps(5, start) infinite;
+  -ms-animation: blink 0.7s steps(5, start) infinite;
+}
+@-moz-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-ms-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
