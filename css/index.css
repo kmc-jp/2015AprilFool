@@ -26,6 +26,45 @@ body{
   user-select: none
 }
 
+#history {
+  border: 1px solid #000;
+  margin: 0 0 10px 0;
+  width: 300px;
+  background: white;
+}
+#history-title {
+  -moz-animation: blink 0.7s steps(5, start) infinite;
+  -webkit-animation: blink 0.7s steps(5, start) infinite;
+  -ms-animation: blink 0.7s steps(5, start) infinite;
+}
+@-moz-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+@-ms-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+.history-new {
+  color: red;
+  background: yellow;
+  margin: 0 5px 0 0;
+}
+.history-new:after {
+  content: "new!";
+  font-weight: bold;
+  -moz-animation: blink 0.7s steps(5, start) infinite;
+  -webkit-animation: blink 0.7s steps(5, start) infinite;
+  -ms-animation: blink 0.7s steps(5, start) infinite;
+}
+
 #welcome-kmc {
   -moz-animation: logo-animation 1s ease 0s infinite alternate;
   -webkit-animation: logo-animation 1s ease 0s infinite alternate;
