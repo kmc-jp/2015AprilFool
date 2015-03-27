@@ -52,3 +52,15 @@ body{
     visibility: hidden;
   }
 }
+.history-new {
+  color: red;
+  background: yellow;
+  margin: 0 5px 0 0;
+}
+.history-new:after {
+  content: "new!";
+  font-weight: bold;
+  -moz-animation: blink 0.7s steps(5, start) infinite;
+  -webkit-animation: blink 0.7s steps(5, start) infinite;
+  -ms-animation: blink 0.7s steps(5, start) infinite;
+}
