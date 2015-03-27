@@ -1,4 +1,4 @@
-var WebClap = React.createClass({
+var Webclap = React.createClass({
   handleClick: function() {
     var option = 'width=420,height=230,resizable=no,scrollbars=no,status=no';
     window.open('webclap.html', null, option);
@@ -15,7 +15,7 @@ var WebClap = React.createClass({
 $(function() {
   $('.webclap').each(function() {
     React.render(
-      <WebClap />,
+      <Webclap />,
       $(this).get(0)
     );
   });
