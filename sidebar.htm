@@ -2,9 +2,8 @@
 <html>
 <head>
   <title>ＫＭＣのＨＰのＭＥＮＵ</title>
-  <script src="https://fb.me/react-0.13.1.js"></script>
-  <script src="https://fb.me/JSXTransformer-0.13.1.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="js/audio.js"></script>
   <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body oncontextmenu="alert('右クリックは禁止です！！！！！！！！'); return false">
@@ -14,11 +13,12 @@
     <li><a href="top.htm" target="main">Top</a></li>
   </ul>
   </td></tr></table>
-  <audio autoplay loop controll src="./file/bg.wav" type="audio/wav">
-    <embed src="./file/bg.mid" type="audio/midi" autostart="true" repeat="true" width="0" height="0">
-    <noembed>
-      <bgsound src="./file/bg.mid" type="audio/midi" loop="false" />
-    </noembed>
+  <input type="button" value="BGMを止める" id="audioControll">
+  <audio autoplay loop id="bgmAudio">
+    <source src="./file/bg.mp3" type="audio/mpeg" />
+    <source src="./file/bg.wav" type="audio/wav" />
+    <!-- <audio> に対応してない場合はmidiを特別に鳴らす -->
+    <embed src="./file/bg.mid" name="myMidi" type="audio/midi" autostart="true" id="bgmEmbed" repeat="true" width="0" height="0">
   </audio>
 </body>
 </html>
