@@ -86,6 +86,11 @@ body{
   -webkit-animation: blink 0.7s steps(5, start) infinite;
   -ms-animation: blink 0.7s steps(5, start) infinite;
 }
+.banner {
+  -moz-animation: blink 1.2s steps(5, start) infinite;
+  -webkit-animation: blink 1.2s steps(5, start) infinite;
+  -ms-animation: blink 1.2s steps(5, start) infinite;
+}
 
 #welcome-kmc {
   height: 309px;
