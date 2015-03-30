@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+  <title>ＫＭＣ度チェック</title>
+  <script src="https://fb.me/react-0.13.1.js"></script>
+  <script src="https://fb.me/JSXTransformer-0.13.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="http://cdn.craig.is/js/mousetrap/mousetrap.min.js?9d308"></script>
+  <script src="js/mouse.js"></script>
+  <script type="text/jsx" src="js/webclap.js"></script>
+
+<script>
+function hantei() {
+  var tokuten = 0;
+  for (var toi = 1; toi <= 10; toi++) {
+    var radioList = document.getElementsByName("" + toi);
+    for (var i = 0; i < radioList.length; i++) { 
+      if (radioList[i].checked) {
+        tokuten = tokuten + parseInt(radioList[i].value);
+      }
+    }
+  }
+  alert("あなたのＫＭＣ度は" + tokuten * 10 + "点です！！");
+}
+
+function reset() {
+  document.frm.reset();
+}
+</script>
+
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body oncontextmenu="alert('右ｸﾘｯｸは禁止です！！！！！！！！'); return false">
+<p>
+<font size="+4" color="red">ＫＭＣ度ﾁｪｯｸ</font>
+あなたがどのくらいＫＭＣに向いているなのかをﾁｪｯｸします。<br>
+はたしてあなたは一体何点取れるかな？
+<hr color="red">
+<p>
+<center><blockquote>
+<form name="frm">
+<table bgcolor="white" border="10" width="100%">
+<tr>
+  <td>ＭａｃｂｏｏｋにＬｉｎｕｘ系ＯＳを入れたことがある</td>
+  <td>
+  <div align="right">
+    <input type="radio" name="1" value="1">はい
+    <input type="radio" name="1" value="0" checked>いいえ
+  </div></td>
+</tr>
+<tr>
+  <td>座布団よりは座椅子派だ</td>
+  <td>
+  <div align="right">
+    <input type="radio" name="2" value="1">はい
+    <input type="radio" name="2" value="0" checked>いいえ
+  </div>
+  </td>
+</tr>
+<tr>
+  <td>座椅子で寝ることができる</td>
+  <td>
+  <div align="right">
+    <input type="radio" name="3" value="1">はい
+    <input type="radio" name="3" value="0" checked>いいえ
+  </div>
+  </td>
+</tr>
+<tr>
+  <td>ｴﾅｼﾞｰﾄﾞﾘﾝｸといえばﾚｯﾄﾞﾌﾞﾙだ</td>
+  <td>
+  <div align="right">
+    <input type="radio" name="4" value="1">はい
+    <input type="radio" name="4" value="0" checked>いいえ
+  </div>
+  </td>
+</tr>
+<tr>
+  <td>日々徳を高める努力をしている</td>
+  <td>
+  <div align="right">
+    <input type="radio" name="5" value="1">はい
+    <input type="radio" name="5" value="0" checked>いいえ
+  </div>
+  </td>
+</tr>
+<tr>
+  <td>「そばのせ」ではない、「ﾓﾀﾞﾝ焼き」だ</td>
+  <td>
+  <div align="right">
+    <input type="radio" name="6" value="1">はい
+    <input type="radio" name="6" value="0" checked>いいえ
+  </div>
+  </td>
+</tr>
+<tr>
+  <td>換気だ</td>
+  <td>
+  <div align="right">
+    <input type="radio" name="7" value="1">はい
+    <input type="radio" name="7" value="0" checked>いいえ
+  </div>
+  </td>
+</tr>
+<tr>
+  <td>趣味はＳＳＨだ</td>
+  <td>
+  <div align="right">
+    <input type="radio" name="8" value="1">はい
+    <input type="radio" name="8" value="0" checked>いいえ
+  </div>
+  </td>
+</tr>
+<tr>
+  <td>こたつよりも暖房だ</td>
+  <td>
+  <div align="right">
+    <input type="radio" name="9" value="1">はい
+    <input type="radio" name="9" value="0" checked>いいえ
+  </div>
+  </td>
+</tr>
+<tr>
+  <td>会費を滞納したことがない</td>
+  <td>
+  <div align="right">
+    <input type="radio" name="10" value="1">はい
+    <input type="radio" name="10" value="0" checked>いいえ
+  </div>
+  </td>
+</tr>
+<tr>
+</table>
+</form>
+</center></blockquote>
+
+<p>
+<input type="button" value="判定" onclick="hantei()">
+<input type="button" value="やりなおし" onclick="reset()">
+
+</body>
