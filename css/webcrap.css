@@ -12,17 +12,17 @@ h2 {
 }
 @-moz-keyframes spin {
 	0% {-moz-transform: rotate(0deg);}
-	100% {-webkit-transform: rotate(1800deg);}
+	100% {-moz-transform: rotate(1800deg);}
 }
 @-ms-keyframes spin {
 	0% {-ms-transform: rotate(0deg);}
-	100% {-webkit-transform: rotate(1800deg);}
+	100% {-ms-transform: rotate(1800deg);}
 }
 @-o-keyframes spin {
 	0% {-o-transform: rotate(0deg);}
-	100% {-webkit-transform: rotate(1800deg);}
+	100% {-o-transform: rotate(1800deg);}
 }
 @keyframes spin {
 	0% {transform: rotate(0deg);}
-	100% {-webkit-transform: rotate(1800deg);}
+	100% {transform: rotate(1800deg);}
 }
