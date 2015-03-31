@@ -4,6 +4,16 @@ use MIME::Base64;
 
 require "cgi-lib.pl";
 
+sub escape {
+    my $str = $_[0];
+    $str =~ s/&/&amp;/go;
+    $str =~ s/</&lt;/go;
+    $str =~ s/>/&gt;/go;
+    $str =~ s/"/&quot;/go;
+    $str =~ s/'/&#39;/go;
+    $str;
+}
+
 print <<EOF;
 Content-type: text/html; charset=Shift_JIS
 
@@ -38,7 +48,7 @@ if ($message ne "") {
 }
 
 foreach $data (@log) {
-  $decoded_message = decode_base64($data);
+  $decoded_message = escape(decode_base64($data));
   print "<div class='message'>$decoded_message</div>\n";
 }
 
