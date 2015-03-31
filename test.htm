@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+<h1>てすと</h1>
+
+<img src='img/.png' />
+<br />
+<script type="text/javascript">// <!--
+var counter=0;
+var counter2=0;
+var duration=30;
+function addPeke(n){
+  n = n || 0;
+  for(i=0;i<=n;i++){
+  var str="<img src='img/peke.png' id='img" + counter + "' />&nbsp;";
+  jQuery('body').append(str);
+  counter++;
+  }
+  if(counter%10==0) jQuery('body').append("<br>");
+  duration+=50+(100*(Math.random()));
+  window.setTimeout(expandLogo, duration);
+  console.log(duration);
+}
+function expandLogo(){
+  var i=document.getElementById('img' + counter2);
+  i.src="img/KMClogo_mini.png"
+  i.width=60
+  i.height=45
+  counter2++
+}
+  addPeke(20);
+setInterval(addPeke, 5);
+// -->
+</script>
+</body>
+
