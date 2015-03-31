@@ -24,23 +24,35 @@ Content-type: text/html; charset=UTF-8
     <h1>掲示板</h1>
 
     <form method="post" action="bbs.cgi">
-      <textarea name="message"></textarea>
-      <input type="submit" value="送信">
+      <div>
+        名前: <input type="text" name="name">
+      </div>
+      <div>
+        本文
+        <textarea name="body"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="送信">
+      </div>
     </form>
 
     <hr>
 EOF
 
 &ReadParse(*form);
-$message = $form{"message"};
+$body = $form{"body"};
+$name = $form{"name"};
 
 open(IN, "data.txt");
 @log = <IN>;
 close(IN);
 
-if ($message ne "") {
-  $encoded_message = encode_base64($message);
-  unshift @log, "$encoded_message\n";
+if ($body ne "") {
+  $encoded_body = encode_base64($body);
+  chomp $encoded_body;
+  $encoded_name = encode_base64($name);
+  chomp $encoded_name;
+  unshift @log, "$encoded_name<>$encoded_body\n";
 
   open(OUT, "> data.txt");
   print OUT @log;
@@ -48,8 +60,15 @@ if ($message ne "") {
 }
 
 foreach $data (@log) {
-  $decoded_message = escape(decode_base64($data));
-  print "<div class='message'>$decoded_message</div>\n";
+  @data = split(/<>/, $data);
+  $decoded_name = escape(decode_base64($data[0]));
+  $decoded_body = escape(decode_base64($data[1]));
+  print <<EOF;
+<div class="message">
+  <span class="name">$decoded_name:</span>
+  <span class="body">$decoded_body</span>
+</div>
+EOF
 }
 
 print <<EOF;
