@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
   <title>ＫＭＣ度ﾁｪｯｸ</title>
   <script src="https://fb.me/react-0.13.1.js"></script>
   <script src="https://fb.me/JSXTransformer-0.13.1.js"></script>
@@ -13,7 +14,7 @@ function hantei() {
   tokuten = 0;
   for (var toi = 1; toi <= 10; toi++) {
     var radioList = document.getElementsByName("" + toi); // toi番のラジオボタンを取得する
-    for (var i = 0; i < radioList.length; i++) { 
+    for (var i = 0; i < radioList.length; i++) {
       if (radioList[i].checked) {
         tokuten = tokuten + parseInt(radioList[i].value);
       }
@@ -26,7 +27,7 @@ function hantei() {
 
   if (tokuten < 30) {
     document.getElementById("coment").innerHTML = "残念！！！！";
-  } else if (tokuten < 60) { 
+  } else if (tokuten < 60) {
     document.getElementById("coment").innerHTML = "もう少しがんばりましょう。ﾚｯﾄﾞﾌﾞﾙを飲むと吉です。";
   } else if (tokuten < 90) {
     document.getElementById("coment").innerHTML = "とてもＫＭＣ力が高いです。ＫＭＣに入部してみませんか？";
