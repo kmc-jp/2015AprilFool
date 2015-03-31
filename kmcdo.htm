@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
-  <title>�ˣͣ��٥����å�</title>
+  <title>ＫＭＣ度ﾁｪｯｸ</title>
   <script src="https://fb.me/react-0.13.1.js"></script>
   <script src="https://fb.me/JSXTransformer-0.13.1.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -13,7 +13,7 @@
 function hantei() {
   tokuten = 0;
   for (var toi = 1; toi <= 10; toi++) {
-    var radioList = document.getElementsByName("" + toi); // toi�֤Υ饸���ܥ�����������
+    var radioList = document.getElementsByName("" + toi); // toi番のラジオボタンを取得する
     for (var i = 0; i < radioList.length; i++) {
       if (radioList[i].checked) {
         tokuten = tokuten + parseInt(radioList[i].value);
@@ -23,16 +23,16 @@ function hantei() {
 
   tokuten = tokuten * 10;
 
-  document.getElementById("kekka").innerHTML = "<font size='+3'>���ʤ��Σˣͣ��٤�" + tokuten + "���Ǥ�����������</font><input type='button' onclick='tweet()' value='�Ĥ֤䤯'>";
+  document.getElementById("kekka").innerHTML = "<font size='+3'>あなたのＫＭＣ度は" + tokuten + "点です！！！！！</font><input type='button' onclick='tweet()' value='つぶやく'>";
 
   if (tokuten < 30) {
-    document.getElementById("coment").innerHTML = "��ǰ��������";
+    document.getElementById("coment").innerHTML = "残念！！！！";
   } else if (tokuten < 60) {
-    document.getElementById("coment").innerHTML = "�⤦��������Ф�ޤ��礦����åɥ֥�����ȵȤǤ���";
+    document.getElementById("coment").innerHTML = "もう少しがんばりましょう。ﾚｯﾄﾞﾌﾞﾙを飲むと吉です。";
   } else if (tokuten < 90) {
-    document.getElementById("coment").innerHTML = "�ȤƤ�ˣͣ��Ϥ��⤤�Ǥ����ˣͣä��������Ƥߤޤ��󤫡�";
+    document.getElementById("coment").innerHTML = "とてもＫＭＣ力が高いです。ＫＭＣに入部してみませんか？";
   } else {
-    document.getElementById("coment").innerHTML = "�������������������������������������ʤ��������ˣͣäǤ���������������";
+    document.getElementById("coment").innerHTML = "すごい！！！！！！すごい！！！！！あなたこそがＫＭＣです！！！！！！！";
   }
 }
 
@@ -47,102 +47,102 @@ function tweet() {
 
   <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
-<body oncontextmenu="alert('������å��϶ػߤǤ�����������������'); return false">
+<body oncontextmenu="alert('右ｸﾘｯｸは禁止です！！！！！！！！'); return false">
 <p>
-<font size="+4" color="red">�ˣͣ��٥����å�</font><br>
-���ʤ����ɤΤ��餤�ˣͣä˸����Ƥ���ʤΤ�������å����ޤ���<br>
-�Ϥ����Ƥ��ʤ��ϰ��β������뤫�ʡ�
+<font size="+4" color="red">ＫＭＣ度ﾁｪｯｸ</font><br>
+あなたがどのくらいＫＭＣに向いているなのかをﾁｪｯｸします。<br>
+はたしてあなたは一体何点取れるかな？
 <hr color="red">
 <p>
 <center><blockquote>
 <form name="frm">
 <table bgcolor="white" border="10" width="100%">
 <tr>
-  <td>�ͣ������ˣ̣������ϣϣӤ����줿���Ȥ�����</td>
+  <td>ＭａｃｂｏｏｋにＬｉｎｕｘ系ＯＳを入れたことがある</td>
   <td>
   <div align="right">
-    <input type="radio" name="1" value="1">�Ϥ�
-    <input type="radio" name="1" value="0" checked="checked">������
+    <input type="radio" name="1" value="1">はい
+    <input type="radio" name="1" value="0" checked="checked">いいえ
   </div></td>
 </tr>
 <tr>
-  <td>�����Ĥ��Ϻ°ػ��ɤ�</td>
+  <td>座布団よりは座椅子派だ</td>
   <td>
   <div align="right">
-    <input type="radio" name="2" value="1">�Ϥ�
-    <input type="radio" name="2" value="0" checked="checked">������
+    <input type="radio" name="2" value="1">はい
+    <input type="radio" name="2" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
 <tr>
-  <td>�°ػҤǿ��뤳�Ȥ��Ǥ���</td>
+  <td>座椅子で寝ることができる</td>
   <td>
   <div align="right">
-    <input type="radio" name="3" value="1">�Ϥ�
-    <input type="radio" name="3" value="0" checked="checked">������
+    <input type="radio" name="3" value="1">はい
+    <input type="radio" name="3" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
 <tr>
-  <td>�ߤ�ʤ����ޤ�м��ʤ�</td>
+  <td>みんなが集まれば寿司だ</td>
   <td>
   <div align="right">
-    <input type="radio" name="4" value="1">�Ϥ�
-    <input type="radio" name="4" value="0" checked="checked">������
+    <input type="radio" name="4" value="1">はい
+    <input type="radio" name="4" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
 <tr>
-  <td>�����Ĥ�����˼��</td>
+  <td>こたつよりも暖房だ</td>
   <td>
   <div align="right">
-    <input type="radio" name="5" value="1">�Ϥ�
-    <input type="radio" name="5" value="0" checked="checked">������
+    <input type="radio" name="5" value="1">はい
+    <input type="radio" name="5" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
 <tr>
-  <td>�֤��ФΤ��פǤϤʤ����֥����Ƥ��פ�</td>
+  <td>「そばのせ」ではない、「ﾓﾀﾞﾝ焼き」だ</td>
   <td>
   <div align="right">
-    <input type="radio" name="6" value="1">�Ϥ�
-    <input type="radio" name="6" value="0" checked="checked">������
+    <input type="radio" name="6" value="1">はい
+    <input type="radio" name="6" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
 <tr>
-  <td>������</td>
+  <td>換気だ</td>
   <td>
   <div align="right">
-    <input type="radio" name="7" value="1">�Ϥ�
-    <input type="radio" name="7" value="0" checked="checked">������
+    <input type="radio" name="7" value="1">はい
+    <input type="radio" name="7" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
 <tr>
-  <td>��������</td>
+  <td>徳がある</td>
   <td>
   <div align="right">
-    <input type="radio" name="8" value="1">�Ϥ�
-    <input type="radio" name="8" value="0" checked="checked">������
+    <input type="radio" name="8" value="1">はい
+    <input type="radio" name="8" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
 <tr>
-  <td>��̣�ϣӣӣȤ�</td>
+  <td>趣味はＳＳＨだ</td>
   <td>
   <div align="right">
-    <input type="radio" name="9" value="1">�Ϥ�
-    <input type="radio" name="9" value="0" checked="checked">������
+    <input type="radio" name="9" value="1">はい
+    <input type="radio" name="9" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
 <tr>
-  <td>����á�����á�����á�����á�</td>
+  <td>ｱﾝｯ！ｱﾝｯ！ｱﾝｯ！ｱﾝｯ！</td>
   <td>
   <div align="right">
-    <input type="radio" name="10" value="1">�Ϥ�
-    <input type="radio" name="10" value="0" checked="checked">������
+    <input type="radio" name="10" value="1">はい
+    <input type="radio" name="10" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
@@ -152,8 +152,8 @@ function tweet() {
 </center></blockquote>
 
 <p>
-<input type="button" value="Ƚ��" onclick="hantei()">
-<input type="button" value="���ʤ���" onclick="reset()">
+<input type="button" value="判定" onclick="hantei()">
+<input type="button" value="やりなおし" onclick="reset()">
 
 <p>
 <div id="kekka"></div><br><br>
