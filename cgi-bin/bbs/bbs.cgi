@@ -22,18 +22,18 @@ Content-type: text/html; charset=UTF-8
 <html>
   <head></head>
   <body>
-    <h1>·Ç¼¨ÈÄ</h1>
+    <h1>æ²ç¤ºæ¿</h1>
 
     <form method="post" action="bbs.cgi">
       <div>
-        Ì¾Á°: <input type="text" name="name">
+        åå‰: <input type="text" name="name">
       </div>
       <div>
-        ËÜÊ¸
+        æœ¬æ–‡
         <textarea name="body"></textarea>
       </div>
       <div>
-        <input type="submit" value="Á÷¿®">
+        <input type="submit" value="é€ä¿¡">
       </div>
     </form>
 
