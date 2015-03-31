@@ -24,18 +24,18 @@ Content-type: text/html; charset=EUC-JP
     <meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
   </head>
   <body>
-    <h1>æ²ç¤ºæ¿</h1>
+    <h1>·Ç¼¨ÈÄ</h1>
 
     <form method="post" action="bbs.cgi">
       <div>
-        åå‰: <input type="text" name="name">
+        Ì¾Á°: <input type="text" name="name">
       </div>
       <div>
-        æœ¬æ–‡
+        ËÜÊ¸
         <textarea name="body"></textarea>
       </div>
       <div>
-        <input type="submit" value="é€ä¿¡">
+        <input type="submit" value="Á÷¿®">
       </div>
     </form>
 
