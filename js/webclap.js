@@ -6,7 +6,7 @@ var Webclap = React.createClass({
   render: function() {
     return (
       <button className="webclap" onClick={this.handleClick}>
-        £×£å£âÇï¼ê
+        &#65335;&#65349;&#65346;&#25293;&#25163;
       </button>
     );
   }
