@@ -41,6 +41,10 @@ body{
   }
 }
 
+#github img {
+  z-index: 100;
+}
+
 #kmc_mouse {
   position: absolute;
   user-select: none
