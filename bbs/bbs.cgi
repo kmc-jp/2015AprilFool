@@ -15,7 +15,7 @@ sub escape {
 }
 
 print <<EOF;
-Content-type: text/html; charset=Shift_JIS
+Content-type: text/html; charset=UTF-8
 
 <!DOCTYPE html>
 <html>
