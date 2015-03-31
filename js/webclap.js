@@ -1,7 +1,7 @@
 var Webclap = React.createClass({
   handleClick: function() {
     var option = 'width=420,height=230,resizable=no,scrollbars=no,status=no';
-    window.open('webclap.html', null, option);
+    window.open('webclap.htm', null, option);
   },
   render: function() {
     return (
