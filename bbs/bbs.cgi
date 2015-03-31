@@ -12,7 +12,7 @@ Content-type: text/html; charset=Shift_JIS
     <h1>掲示板</h1>
 
     <form method="post" action="bbs.cgi">
-      <textarea id="message"></textarea>
+      <textarea name="message"></textarea>
       <input type="submit" value="送信">
     </form>
 
