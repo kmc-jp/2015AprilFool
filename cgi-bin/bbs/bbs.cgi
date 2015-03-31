@@ -3,6 +3,7 @@
 use MIME::Base64;
 
 require "cgi-lib.pl";
+require "jcode.pl";
 
 sub escape {
     my $str = $_[0];
