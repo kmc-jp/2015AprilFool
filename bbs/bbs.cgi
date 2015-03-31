@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+use MIME::Base64;
+
 require "cgi-lib.pl";
 
 print <<EOF;
@@ -27,7 +29,8 @@ open(IN, "data.txt");
 close(IN);
 
 if ($message ne "") {
-  unshift @log, "$message\n";
+  $encoded_message = encode_base64($message);
+  unshift @log, "$encoded_message\n";
 
   open(OUT, "> data.txt");
   print OUT @log;
@@ -35,7 +38,8 @@ if ($message ne "") {
 }
 
 foreach $data (@log) {
-  print "<div class='message'>$data</div>\n";
+  $decoded_message = decode_base64($data);
+  print "<div class='message'>$decoded_message</div>\n";
 }
 
 print <<EOF;
