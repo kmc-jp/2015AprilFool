@@ -6,10 +6,10 @@ $(function(){
     var audio = document.getElementById("bgmAudio");
     if($(this).is('.play')){
       audio.play();
-      $(this).val('BGMを止める')
+      $(this).val('ＢＧＭを止める')
     }else{
       audio.pause();
-      $(this).val('BGMを鳴らす');
+      $(this).val('ＢＧＭを鳴らす');
     }
     $(this).toggleClass("play");
   })
