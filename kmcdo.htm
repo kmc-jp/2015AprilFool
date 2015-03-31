@@ -10,20 +10,37 @@
 
 <script>
 function hantei() {
-  var tokuten = 0;
+  tokuten = 0;
   for (var toi = 1; toi <= 10; toi++) {
-    var radioList = document.getElementsByName("" + toi);
+    var radioList = document.getElementsByName("" + toi); // toi番のラジオボタンを取得する
     for (var i = 0; i < radioList.length; i++) { 
       if (radioList[i].checked) {
         tokuten = tokuten + parseInt(radioList[i].value);
       }
     }
   }
-  alert("あなたのＫＭＣ度は" + tokuten * 10 + "点です！！");
+
+  tokuten = tokuten * 10;
+
+  document.getElementById("kekka").innerHTML = "<font size='+3'>あなたのＫＭＣ度は" + tokuten + "点です！！！！！</font><input type='button' onclick='tweet()' value='つぶやく'>";
+
+  if (tokuten < 30) {
+    document.getElementById("coment").innerHTML = "残念！！！！";
+  } else if (tokuten < 60) { 
+    document.getElementById("coment").innerHTML = "もう少しがんばりましょう。ﾚｯﾄﾞﾌﾞﾙを飲むと吉です。";
+  } else if (tokuten < 90) {
+    document.getElementById("coment").innerHTML = "とてもＫＭＣ力が高いです。ＫＭＣに入部してみませんか？";
+  } else {
+    document.getElementById("coment").innerHTML = "すごい！！！！！！すごい！！！！！あなたこそがＫＭＣです！！！！！！！";
+  }
 }
 
 function reset() {
   document.frm.reset();
+}
+
+function tweet() {
+  window.open("https://twitter.com/intent/tweet?text=.%E3%82%8F%E3%81%9F%E3%81%97%E3%81%AE%EF%BC%AB%EF%BC%AD%EF%BC%A3%E5%BA%A6%E3%81%AF" + (tokuten * 10) + "%E7%82%B9%E3%81%A7%E3%81%97%E3%81%9F%EF%BC%81%EF%BC%81%20via%20%40KMC_JP%20http%3A%2F%2Fkmc.jp");
 }
 </script>
 
@@ -31,7 +48,7 @@ function reset() {
 </head>
 <body oncontextmenu="alert('右ｸﾘｯｸは禁止です！！！！！！！！'); return false">
 <p>
-<font size="+4" color="red">ＫＭＣ度ﾁｪｯｸ</font>
+<font size="+4" color="red">ＫＭＣ度ﾁｪｯｸ</font><br>
 あなたがどのくらいＫＭＣに向いているなのかをﾁｪｯｸします。<br>
 はたしてあなたは一体何点取れるかな？
 <hr color="red">
@@ -44,7 +61,7 @@ function reset() {
   <td>
   <div align="right">
     <input type="radio" name="1" value="1">はい
-    <input type="radio" name="1" value="0" checked>いいえ
+    <input type="radio" name="1" value="0" checked="checked">いいえ
   </div></td>
 </tr>
 <tr>
@@ -52,7 +69,7 @@ function reset() {
   <td>
   <div align="right">
     <input type="radio" name="2" value="1">はい
-    <input type="radio" name="2" value="0" checked>いいえ
+    <input type="radio" name="2" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
@@ -61,25 +78,25 @@ function reset() {
   <td>
   <div align="right">
     <input type="radio" name="3" value="1">はい
-    <input type="radio" name="3" value="0" checked>いいえ
+    <input type="radio" name="3" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
 <tr>
-  <td>ｴﾅｼﾞｰﾄﾞﾘﾝｸといえばﾚｯﾄﾞﾌﾞﾙだ</td>
+  <td>みんなが集まれば寿司だ</td>
   <td>
   <div align="right">
     <input type="radio" name="4" value="1">はい
-    <input type="radio" name="4" value="0" checked>いいえ
+    <input type="radio" name="4" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
 <tr>
-  <td>日々徳を高める努力をしている</td>
+  <td>こたつよりも暖房だ</td>
   <td>
   <div align="right">
     <input type="radio" name="5" value="1">はい
-    <input type="radio" name="5" value="0" checked>いいえ
+    <input type="radio" name="5" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
@@ -88,7 +105,7 @@ function reset() {
   <td>
   <div align="right">
     <input type="radio" name="6" value="1">はい
-    <input type="radio" name="6" value="0" checked>いいえ
+    <input type="radio" name="6" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
@@ -97,7 +114,16 @@ function reset() {
   <td>
   <div align="right">
     <input type="radio" name="7" value="1">はい
-    <input type="radio" name="7" value="0" checked>いいえ
+    <input type="radio" name="7" value="0" checked="checked">いいえ
+  </div>
+  </td>
+</tr>
+<tr>
+  <td>徳がある</td>
+  <td>
+  <div align="right">
+    <input type="radio" name="8" value="1">はい
+    <input type="radio" name="8" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
@@ -105,26 +131,17 @@ function reset() {
   <td>趣味はＳＳＨだ</td>
   <td>
   <div align="right">
-    <input type="radio" name="8" value="1">はい
-    <input type="radio" name="8" value="0" checked>いいえ
-  </div>
-  </td>
-</tr>
-<tr>
-  <td>こたつよりも暖房だ</td>
-  <td>
-  <div align="right">
     <input type="radio" name="9" value="1">はい
-    <input type="radio" name="9" value="0" checked>いいえ
+    <input type="radio" name="9" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
 <tr>
-  <td>会費を滞納したことがない</td>
+  <td>ｱﾝｯ！ｱﾝｯ！ｱﾝｯ！ｱﾝｯ！</td>
   <td>
   <div align="right">
     <input type="radio" name="10" value="1">はい
-    <input type="radio" name="10" value="0" checked>いいえ
+    <input type="radio" name="10" value="0" checked="checked">いいえ
   </div>
   </td>
 </tr>
@@ -136,5 +153,9 @@ function reset() {
 <p>
 <input type="button" value="判定" onclick="hantei()">
 <input type="button" value="やりなおし" onclick="reset()">
+
+<p>
+<div id="kekka"></div><br><br>
+<div id="coment"></div>
 
 </body>
