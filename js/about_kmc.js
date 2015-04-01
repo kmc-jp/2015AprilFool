@@ -14,7 +14,16 @@ $(function(){
     $(this).attr("scrollamount", i);
   })
 
+  $('h1').children().addBack().contents().each(function() {
+    $(this).replaceWith($(this).text().replace(/(\S)/g, '<span>$1</span>'));
+  })
   $('h2').children().addBack().contents().each(function() {
+    $(this).replaceWith($(this).text().replace(/(\S)/g, '<span>$1</span>'));
+  })
+  $('h3').children().addBack().contents().each(function() {
+    $(this).replaceWith($(this).text().replace(/(\S)/g, '<span>$1</span>'));
+  })
+  $('h4').children().addBack().contents().each(function() {
     $(this).replaceWith($(this).text().replace(/(\S)/g, '<span>$1</span>'));
   })
 
