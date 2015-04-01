@@ -117,3 +117,12 @@ body{
   0% { width: 756px; height: 189px; }
   100% { width: 1056px; height: 309px; }
 }
+
+@font-face {
+  font-family: 'jis';
+  src: url('../file/jis.ttf') format('truetype');
+}
+
+#jis-font {
+  font-family: 'jis';
+}
