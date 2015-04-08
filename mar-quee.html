@@ -3,11 +3,29 @@
 <polymer-element name="mar-quee" noscript>
   <template>
     <style>
-    div {
+    div.marquee {
       position: relative;
-      -webkit-animation: background-animation 3s ease 0s infinite alternate;
+      -webkit-animation: marquee 3s ease 0s infinite alternate;
+      -moz-animation: marquee 3s ease 0s infinite alternate;
+      -ms-animation: marquee 3s ease 0s infinite alternate;
     }
-    @-webkit-keyframes background-animation {
+    @-webkit-keyframes marquee {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+    @-moz-keyframes marquee {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+    @-ms-keyframes marquee {
       0% {
         left: 0;
       }
@@ -16,8 +34,7 @@
       }
     }
     </style>
-    <div><content></content></div>
+    <div class="marquee"><content></content></div>
   </template>
 </polymer-element>
-
 
