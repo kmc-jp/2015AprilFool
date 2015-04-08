@@ -1,0 +1,23 @@
+<link rel="import" href="./bower_components/polymer/polymer.html">
+
+<polymer-element name="mar-quee" noscript>
+  <template>
+    <style>
+    div {
+      position: relative;
+      -webkit-animation: background-animation 3s ease 0s infinite alternate;
+    }
+    @-webkit-keyframes background-animation {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+    </style>
+    <div><content></content></div>
+  </template>
+</polymer-element>
+
+
