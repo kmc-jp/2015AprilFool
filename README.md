@@ -6,3 +6,9 @@
 とりあえず空っぽいhtmlおいたのでどんどんプルリクしてください
 
 conflictはまあ空気読むかなんとかするので気にしなくてもよいです。
+
+## install dependencies
+
+```
+bower install
+```
