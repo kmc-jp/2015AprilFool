@@ -63,13 +63,6 @@ body{
   margin: 0 0 0 0;
   border: 0;
 }
-#access-celebration {
-  -moz-animation: blink 0.5s steps(5, start) infinite;
-  -webkit-animation: blink 0.5s steps(5, start) infinite;
-  -ms-animation: blink 0.5s steps(5, start) infinite;
-  margin: 0 0 0 0;
-  border: 0;
-}
 @-moz-keyframes blink {
   to {
     visibility: hidden;
