@@ -1,0 +1,19 @@
+{
+  "name": "2015AprilFool",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kmc-jp/2015AprilFool",
+  "authors": [
+    "tyage <namatyage@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.5"
+  }
+}
